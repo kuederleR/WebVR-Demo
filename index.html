@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <title>Hello, World! • A-Frame</title>
     <meta name="description" content="Hello, World! • A-Frame">
-    <script src="aframe/aframe.js"></script>
-   
-  </head>
-  <body>
-    <div style="width: 400px;">
-      
-      <a-scene>
-        <a-sky src="524C1857-20EF-4DAF-A359-3C0F03C5A9C1.jpeg" rotation="0 -130 0"></a-sky>
-      </a-scene>
+    <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+    <div id='vrview'></div>
+    window.addEventListener('load', onVrViewLoad);
 
-    </div>
+function onVrViewLoad() {
+  // Selector '#vrview' finds element with id 'vrview'.
+  var vrView = new VRView.Player('#vrview', {
+    video: '/url/to/video.mp4',
+    is_stereo: true
+  });
+}
   </body>
 </html>
